@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #20b2aa;
+}
+
+a {
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+
+.d-flex {
+  display: flex;
+}
+.head_menu {
+  /* text-align: center; */
+  margin: 2% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: bisque; */
+}
+
+.head_menu_item {
+  /* background-color: blue; */
+  padding: 1vh 1vw;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.head_menu_item:hover {
+  text-shadow: 0 0 5px#fff;
+}
+
+.menu_color_1 {
+  color: #fc4300;
+  text-shadow: #000 1px 0px 0;
+}
+
+.menu_color_2 {
+  color: #f0c309;
+  text-shadow: #000 1px 0px 0;
+}
+
+.menu_color_3 {
+  color: #20800c;
+  text-shadow: #000 1px 0px 0;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.main_menu {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_button {
+  max-width: 520px;
+  min-width: 180px;
+  max-height: 360px;
+  min-height: 90px;
+  margin: 2%;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background-color: aqua;
+}
+
+.main_button_1 {
+  background-image: url(../images/witcher.jpg);
+  background-size: cover;
+  /* background-position: center; */
+}
+
+.main_button_2 {
+  background-image: url(../images/assasin.jpg);
+  background-size: cover;
+}
+
+.main_button_3 {
+  background-image: url(../images/heroes.jpg);
+  background-size: cover;
+}
+
+.main_button:hover {
+  box-shadow: 0 0 5px 2px #fff, inset 0 0 5px 2px #fff;
+}
+
+.main_button:hover {
+  cursor: pointer;
+}
+
+.description {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
