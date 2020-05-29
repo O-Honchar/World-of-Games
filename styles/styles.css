@@ -69,7 +69,7 @@ a {
   margin: 2%;
   border-radius: 15px;
   border: 1px solid #000;
-  background-color: aqua;
+  background-color: aqua; /* WTF */
 }
 
 .main_button_1 {
@@ -84,8 +84,10 @@ a {
 }
 
 .main_button_3 {
-  background-image: url(../images/heroes.jpg);
-  background-size: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid #000;
 }
 
 .main_button:hover {
