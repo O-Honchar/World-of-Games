@@ -55,6 +55,8 @@ a {
 
 .main_menu {
   margin-top: 5%;
+  /* width: 70vw; */
+  height: 30vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -62,10 +64,8 @@ a {
 }
 
 .main_button {
-  max-width: 520px;
-  min-width: 180px;
-  max-height: 360px;
-  min-height: 90px;
+  width: 30%;
+  height: 80%;
   margin: 2%;
   border-radius: 15px;
   border: 1px solid #000;
