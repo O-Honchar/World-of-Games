@@ -3,10 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #20b2aa;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 a {
   text-decoration: none; /* Отменяем подчеркивание у ссылки */
+  display: block;
 }
 
 .d-flex {
@@ -24,29 +26,51 @@ a {
 
 .head_menu_item {
   /* background-color: blue; */
-  padding: 1vh 1vw;
-  font-size: 25px;
+  padding: 1% 1%;
+  font-size: 37px;
   font-weight: 700;
+  letter-spacing: 2px;
+  transition-duration: 0.7s;
+  transition-property: text-shadow;
+  text-shadow: #000 1px 0px 0;
+
+  /* animation of head menu: */
+  animation-name: highlighting;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
+}
+
+.head_menu_item:nth-of-type(1) {
+  color: #fc4300;
+}
+
+.head_menu_item:nth-of-type(2) {
+  color: #f0c309;
+}
+
+.head_menu_item:nth-of-type(3) {
+  color: #20800c;
 }
 
 .head_menu_item:hover {
   text-shadow: 0 0 5px#fff;
+  cursor: pointer;
 }
 
-.menu_color_1 {
+/* .menu_color_1 {
   color: #fc4300;
   text-shadow: #000 1px 0px 0;
-}
+} */
 
-.menu_color_2 {
+/* .menu_color_2 {
   color: #f0c309;
   text-shadow: #000 1px 0px 0;
-}
+} */
 
-.menu_color_3 {
+/* .menu_color_3 {
   color: #20800c;
   text-shadow: #000 1px 0px 0;
-}
+} */
 
 .wrapper {
   width: 70%;
@@ -54,9 +78,7 @@ a {
 }
 
 .main_menu {
-  margin-top: 5%;
-  /* width: 70vw; */
-  height: 30vh;
+  margin: 5% 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -65,41 +87,88 @@ a {
 
 .main_button {
   width: 30%;
-  height: 80%;
-  margin: 2%;
-  border-radius: 15px;
-  border: 1px solid #000;
-  background-color: aqua; /* WTF */
 }
 
-.main_button_1 {
+.main_button_inner {
+  position: relative;
+  height: 0;
+  border: none;
+}
+
+.main_button_4-3 {
+  padding-top: 75%; /* 100% ширины делим на 4 и умножаем на 3 */
+}
+
+.main_button_content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 10%;
+  /* background-image: url(../images/assasin.jpg); */
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  transition-duration: 0.7s;
+  transition-property: box-shadow;
+
+  /* animation of main buttons: */
+  animation-name: drop;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
+}
+
+/* .main_button_content:nth-of-type(1) {
   background-image: url(../images/witcher.jpg);
-  background-size: cover;
-  /* background-position: center; */
-}
+} */
 
-.main_button_2 {
+/* .main_button_content:nth-of-type(2) {
   background-image: url(../images/assasin.jpg);
-  background-size: cover;
-}
+} */
 
-.main_button_3 {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  border: 1px solid #000;
-}
+/* .main_button_content:nth-of-type(3) {
+  background-image: url(../images/heroes.jpg);
+} */
 
-.main_button:hover {
+.main_button_content:hover {
   box-shadow: 0 0 5px 2px #fff, inset 0 0 5px 2px #fff;
-}
-
-.main_button:hover {
   cursor: pointer;
 }
 
 .description {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 5% 0;
   text-align: center;
+}
+
+/* animation of main buttons: */
+@keyframes highlighting {
+  0% {
+    text-shadow: #000 1px 0px 0;
+  }
+  40% {
+    text-shadow: 0 0 5px#fff;
+  }
+  60% {
+    text-shadow: 0 0 5px#fff;
+  }
+  100% {
+    text-shadow: #000 1px 0px 0;
+  }
+}
+
+/* animation of head menu: */
+@keyframes drop {
+  0% {
+    top: -40%;
+    bottom: -40%;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+  }
 }
